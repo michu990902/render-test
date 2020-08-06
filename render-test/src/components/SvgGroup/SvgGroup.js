@@ -2,44 +2,47 @@ import React, { useState, useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 const Group = ({children, svgBcr}) => {
-    
-    const [position, setPosition] = useState({x: 50, y: 50, zoom: 1, mouse: {}})
+    const [position, setPosition] = useState({x: 50, y: 50, w: 300, h: 300, zoom: 1, mouse: {}})
     useEffect(() => {
         setPosition(prev => ({...prev, zoom: (1/svgBcr.zoom)}))
     }, [svgBcr])
-    
 
     const handleMouseMove = useRef(e => {
         setPosition(prev => {
             const xDiff = (prev.mouse.x * prev.zoom) - (e.pageX * prev.zoom)
             const yDiff = (prev.mouse.y * prev.zoom) - (e.pageY * prev.zoom)
-                    
+            
             let resX = prev.x - xDiff
             let resY = prev.y - yDiff
-            console.log(svgBcr.w, xDiff, resX)
+
+            let changeX = true;
+            let changeY = true;
+
             if(resX < 0){
                 resX = 0
-                handleMouseUp()
-            }else if(resX > svgBcr.w){
-                resX = svgBcr.w
-                handleMouseUp()
+                changeX = false;
+            }else if(resX > svgBcr.w - prev.w){
+                resX = svgBcr.w - prev.w
+                changeX = false;
             }
 
             if(resY < 0){
                 resY = 0
-                handleMouseUp()
-            }else if(resY > svgBcr.h){
-                resY = svgBcr.h
-                handleMouseUp()
+                changeY = false;
+            }else if(resY > svgBcr.h - prev.h){
+                resY = svgBcr.h - prev.h
+                changeY = false;
             }
 
             return {
+                ...prev,
                 x: resX,
                 y: resY,
-                zoom: prev.zoom,
                 mouse: {
-                x: e.pageX,
-                y: e.pageY,
+                    x: changeX ? e.pageX : prev.mouse.x,
+                    y: changeY ? e.pageY : prev.mouse.y,
+                    // x: e.pageX,
+                    // y: e.pageY,
                 },
             }
         })
@@ -70,6 +73,7 @@ const Group = ({children, svgBcr}) => {
             style={{transform: `translate(${position.x}px, ${position.y}px)`}}
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
         >
             {children}
         </g>

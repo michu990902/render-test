@@ -26,16 +26,33 @@ function App({setSvgBcr}) {
         h: 500,
         zoom: 2
       })}/>
+      
       <Svg w={100} h={200}>
         <SvgGroup x={0} y={0}>
-          <Ellipse 
+          {/* <Ellipse 
             w={150} 
             h={150}
             bgColor="#f00"
             borderColor="#0f0"
             borderWidth="5"
             borderStyle="dashed"
-          />
+          /> */}
+          {/* <text x="0" y="0" style={{textWrap: "200px"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam velit doloremque officia temporibus incidunt similique veniam? Perferendis itaque explicabo iste praesentium dolorem molestiae illo possimus dolores, fuga, aliquam nobis. Doloremque.</text> */}
+
+          {/* //TODO: https://jsfiddle.net/IPWright83/22ahj15o/ */}
+          <switch>
+            <foreignObject x="0" y="0" width="100%" height="100%">
+              <div xmlns="http://www.w3.org/1999/xhtml" style={{
+                background: "#f00",
+                border: "3px solid #0f0",
+                borderRadius: "50%",
+              }} className={styles.wrapper}>
+                <p xmlns="http://www.w3.org/1999/xhtml" className={styles.text}>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis doloribus, eligendi sit hic, ea a dolor maiores suscipit aperiam libero sint atque officia doloremque numquam, quaerat natus aliquam quasi est?
+                </p>
+              </div>
+            </foreignObject>
+          </switch>
         </SvgGroup>
       </Svg>
     </div>

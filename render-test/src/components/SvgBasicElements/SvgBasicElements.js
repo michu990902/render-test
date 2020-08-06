@@ -9,8 +9,8 @@ export const Ellipse = ({w, h, bgColor, borderColor, borderWidth, borderStyle}) 
     };
     return (
         <ellipse 
-            cx="0"
-            cy="0"
+            cx={w/2}
+            cy={h/2}
             rx={w}
             ry={h}
             className={styles.ellipse}
@@ -25,3 +25,7 @@ export const Ellipse = ({w, h, bgColor, borderColor, borderWidth, borderStyle}) 
         />
     )
 }
+
+
+//https://codepen.io/techniq/pen/rLXwJJ
+//

@@ -41,8 +41,6 @@ const Group = ({children, svgBcr}) => {
                 mouse: {
                     x: changeX ? e.pageX : prev.mouse.x,
                     y: changeY ? e.pageY : prev.mouse.y,
-                    // x: e.pageX,
-                    // y: e.pageY,
                 },
             }
         })

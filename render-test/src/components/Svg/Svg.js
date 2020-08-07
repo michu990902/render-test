@@ -13,9 +13,10 @@ const Svg = ({children, svgBcr}) => {
                     width: `${svgBcr.w}px`, 
                     height: `${svgBcr.h}px`, 
                     transform: `scale(${svgBcr.zoom})`}}
-                // viewBox={`0 0 ${w} ${h}`} 
+                // viewBox={`0 0 ${svgBcr.w} ${svgBcr.h}`}
                 xmlns="http://www.w3.org/2000/svg"
                 className={styles.svg}
+                // preserveAspectRatio="xMinYMin"
             >
                 {children}
             </svg>

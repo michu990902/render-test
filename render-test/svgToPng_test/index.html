@@ -4,20 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background: #000;
+        }
+    </style>
 </head>
 <body>
+    <!--<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+        <style>
+            :root{
+                --font-color1: #fff;
+                --map-link-color: #08f;
+            }
+            svg{
+                text-align: center;
+                font-family: sans-serif;
+                color: var(--font-color1);
+            }
+
+            svg a, svg h3, svg p{
+                display: inline;
+            }
+            svg a::before, svg h3::before, svg p::before{
+                content: "";
+                width: 50%;
+                height: 100%;
+                float: right;
+                shape-outside: polygon(
+                    100% 0, 0 0, 40% 4%, 60% 10%, 80% 20%, 90% 28.2%, 95% 34.4%, 100% 50%,
+                    95% 65.6%, 90% 71.8%, 80% 80%, 60% 90%, 40% 96%, 0 100%, 100% 100%
+                );
+            }
+            svg h3{
+                font-size: 1.5rem;
+            }
+            svg a{
+                color: var(--map-link-color);
+                text-decoration: none;
+            }
+
+            .svg_wrapper{
+                padding: 10px;
+                width: 370px;
+                height: 370px;
+            }
+            .svg_wrapper::before{
+                content: "";
+                width: 50%;
+                height: 100%;
+                float: left;
+                shape-outside: polygon(0 0, 100% 0, 60% 4%, 40% 10%, 20% 20%, 10% 28.2%, 5% 34.4%, 0 50%, 5% 65.6%, 10% 71.8%, 20% 80%, 40% 90%, 60% 96%, 100% 100%, 0% 100%);
+            }
+        </style>
+        <foreignObject x="0" y="0" width="1" height="1" style="overflow: visible;">
+            <div class="svg_wrapper" xmlns="http://www.w3.org/1999/xhtml" style="background: rgb(255, 0, 0) none repeat scroll 0% 0%; border: 3px solid rgb(0, 255, 0); border-radius: 50%; width: 370px;">
+                <h3>test test test test test test</h3>
+
+                <hr>
+                
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test</a><br>
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test</a><br>
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test</a><br>
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test test test test</a><br>
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test test test test test test test test test test</a><br>
+                
+                <hr>
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum maxime enim molestiae corporis ipsa. Autem error aut numquam eum eveniet quod, dolores id, nihil sunt dolor quia architecto, molestias laudantium.</p>
+            </div>
+        </foreignObject>
+        <path d="M 250 250 L 300 300" stroke="#0f0" stroke-width="5"/>
+    </svg> -->
     <script>
-    const svg=`<svg version="1.1" baseProfile="full" width="300" height="200"
-        xmlns="http://www.w3.org/2000/svg">
-        <rect width="100%" height="100%" fill="red" />
-        <circle cx="150" cy="100" r="80" fill="green" />
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text></svg>`
+
+        // const svg = `
+        // <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg"></svg>
+        
+        // `;
+    const svg=`<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+            <style>
+                :root{
+                    --font-color1: #fff;
+                    --map-link-color: #08f;
+                }
+                svg{
+                    text-align: center;
+                    font-family: sans-serif;
+                    color: var(--font-color1);
+                    // transform: scale(1.5);
+                }
+
+                svg a, svg h3, svg p{
+                    display: inline;
+                }
+                svg a::before, svg h3::before, svg p::before{
+                    content: "";
+                    width: 50%;
+                    height: 100%;
+                    float: right;
+                    shape-outside: polygon(
+                        100% 0, 0 0, 40% 4%, 60% 10%, 80% 20%, 90% 28.2%, 95% 34.4%, 100% 50%,
+                        95% 65.6%, 90% 71.8%, 80% 80%, 60% 90%, 40% 96%, 0 100%, 100% 100%
+                    );
+                }
+                svg h3{
+                    font-size: 1.5rem;
+                }
+                svg a{
+                    color: var(--map-link-color);
+                    text-decoration: none;
+                }
+
+                .svg_wrapper{
+                    padding: 10px;
+                    width: 370px;
+                    height: 370px;
+                }
+                .svg_wrapper::before{
+                    content: "";
+                    width: 50%;
+                    height: 100%;
+                    float: left;
+                    shape-outside: polygon(0 0, 100% 0, 60% 4%, 40% 10%, 20% 20%, 10% 28.2%, 5% 34.4%, 0 50%, 5% 65.6%, 10% 71.8%, 20% 80%, 40% 90%, 60% 96%, 100% 100%, 0% 100%);
+                }
+            </style>
+            <foreignObject x="0" y="0" width="1" height="1" style="overflow: visible;">
+                <div class="svg_wrapper" xmlns="http://www.w3.org/1999/xhtml" style="background: rgb(255, 0, 0) none repeat scroll 0% 0%; border: 3px solid rgb(0, 255, 0); border-radius: 50%; width: 370px;">
+                    <h3>test test test test test test</h3>
+
+                    <hr>
+                    
+                    <a href="https://localhost" target="_blank" rel="noopener noreferrer">test</a><br>
+                    <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test</a><br>
+                    <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test</a><br>
+                    <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test test test test</a><br>
+                    <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test test test test test test test test test test</a><br>
+                    
+                    <hr>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum maxime enim molestiae corporis ipsa. Autem error aut numquam eum eveniet quod, dolores id, nihil sunt dolor quia architecto, molestias laudantium.</p>
+                </div>
+            </foreignObject>
+            <path d="M 250 250 L 300 300" stroke="#0f0" stroke-width="5"/>
+        </svg>`
+    // const svg=`<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    //         <rect width="100%" height="100%" fill="red" />
+    //         <circle cx="150" cy="100" r="80" fill="green" />
+    //         <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+    //     </svg>`
         svgToPng(svg,(imgData)=>{
             const pngImage = document.createElement('img');
             document.body.appendChild(pngImage);
             pngImage.src=imgData;
         });
         function svgToPng(svg, callback) {
+            svg = svg.replaceAll("<hr>", "<hr/>");
+            svg = svg.replaceAll("<br>", "<br/>");
+
             const url = getSvgUrl(svg);
             svgUrlToPng(url, (imgData) => {
                 callback(imgData);
@@ -29,28 +173,24 @@
         }
         function svgUrlToPng(svgUrl, callback) {
             const svgImage = document.createElement('img');
-            // imgPreview.style.position = 'absolute';
-            // imgPreview.style.top = '-9999px';
             document.body.appendChild(svgImage);
             svgImage.onload = function () {
                 const canvas = document.createElement('canvas');
                 // canvas.width = svgImage.clientWidth;
                 // canvas.height = svgImage.clientHeight;
 
-                //scale 100px, 100px
-                const h = 100 * svgImage.clientHeight / svgImage.clientWidth;
-                canvas.width = 100;
-                canvas.height = h;
-                const canvasCtx = canvas.getContext('2d');
-                // canvasCtx.drawImage(svgImage, 0, 0);
+                //scale width: 100px, height: auto (same aspect ratio)
+                const width = 300;
+                const height = width * svgImage.clientHeight / svgImage.clientWidth;
 
-                //scale 100px, 100px
-                canvasCtx.drawImage(svgImage, 0, 0, 100, h);
+                canvas.width = width;
+                canvas.height = height;
+                const canvasCtx = canvas.getContext('2d');
+                canvasCtx.drawImage(svgImage, 0, 0, width, height);
 
 
                 const imgData = canvas.toDataURL('image/png');
                 callback(imgData);
-                // document.body.removeChild(imgPreview);
             };
             svgImage.src = svgUrl;
         }

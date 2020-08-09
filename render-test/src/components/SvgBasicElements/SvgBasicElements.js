@@ -47,7 +47,7 @@ export const Ellipse = ({title, links, desc, bgColor, borderColor, borderWidth, 
             <foreignObject x="0" y="0" width="1" height="1" style={{
                 overflow: "visible"
             }}>
-            <div style={{
+            <div xmlns="http://www.w3.org/1999/xhtml" style={{
                 background: "#f00",
                 border: "3px solid #0f0",
                 borderRadius: "50%"

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <svg id="svg" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+        <style>
+            :root{
+                --font-color1: #fff;
+                --map-link-color: #08f;
+            }
+            svg{
+                text-align: center;
+                font-family: sans-serif;
+                color: var(--font-color1);
+                // transform: scale(1.5);
+            }
+
+            svg *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            svg a, svg h3, svg p{
+                display: inline;
+            }
+            svg h3{
+                font-size: 1.5rem;
+            }
+            svg a{
+                color: var(--map-link-color);
+                text-decoration: none;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: block;
+            }
+            svg hr{
+                border:1px solid var(--font-color1);
+                margin: 10px 0;
+            }
+
+            .svg_wrapper{
+                //width: 200px;
+                width: 300px;
+                //width: 350px;
+                border-radius: 10px;
+                padding: 10px;
+            }
+        </style>
+        <foreignObject x="0" y="0" width="1" height="1" style="overflow: visible;">
+            <div class="svg_wrapper" xmlns="http://www.w3.org/1999/xhtml" style="border: 3px solid rgb(0, 255, 0);">
+                <h3>test test test test test test</h3>
+
+                <hr>
+                
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test</a>
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test</a>
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test</a>
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test test test test</a>
+                <a href="https://localhost" target="_blank" rel="noopener noreferrer">test test test test test test test test test test test test test</a>
+                
+                <hr>
+                
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, assumenda? Veritatis culpa quos illo autem ipsam iste corrupti molestiae consequatur consectetur quod accusantium rerum, recusandae necessitatibus. Aliquid placeat obcaecati enim volupta</p>
+           
+                </div>
+        </foreignObject>
+        <!-- <path d="M 250 250 L 300 300" stroke="#0f0" stroke-width="5"/> -->
+    </svg>
+
+
+    <script>
+
+        const getSize = (title, desc, linksCount) => {
+            const res = title.length * 2 + desc.length + linksCount * 30;
+
+            if(res <= 300){
+                return 200;
+            }else if(res > 300 && res < 500){
+                return 300;
+            }
+            return 350;
+
+            // return res;
+        };
+        
+        const title = document.querySelector("svg h3");
+        const desc = document.querySelector("svg p");
+        const links = document.querySelectorAll("svg a");
+        
+        const res = getSize(
+            title.textContent, 
+            desc.textContent,
+            // "",
+            links.length
+            // 0
+        );
+
+        console.log(res);
+    </script>
+</body>
+</html>

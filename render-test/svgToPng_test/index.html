@@ -56,13 +56,14 @@
             }
             svg hr{
                 border:1px solid var(--font-color1);
-                margin: 10px;
+                margin: 10px 0;
             }
 
             .svg_wrapper{
                 width: 420px;
                 height: 420px;
                 padding: 10px;
+                border-radius: 50%;
             }
             .svg_wrapper::before{
                 content: "";
@@ -73,7 +74,7 @@
             }
         </style>
         <foreignObject x="0" y="0" width="1" height="1" style="overflow: visible;">
-            <div class="svg_wrapper" xmlns="http://www.w3.org/1999/xhtml" style="border: 3px solid rgb(0, 255, 0); border-radius: 50%;">
+            <div class="svg_wrapper" xmlns="http://www.w3.org/1999/xhtml" style="border: 3px solid rgb(0, 255, 0);">
                 <h3>test test test test test test</h3>
 
                 <hr>
@@ -180,8 +181,6 @@
             const lh = 18; //1rem (a, p)
             const txs = 12; //x letter size (h3)
             const xs = 8; //x letter size (a, p)
-            
-            const hrm = 10; //hr margin
 
             const bt_square = (tlh * txs * title.length) + (lh * xs * desc.length);
 
